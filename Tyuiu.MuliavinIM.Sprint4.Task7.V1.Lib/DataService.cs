@@ -4,16 +4,32 @@ namespace Tyuiu.MuliavinIM.Sprint4.Task7.V1.Lib
 {
     public class DataService : ISprint4Task7V1
     {
-        public int Calculate(int n, int m, string value)
+        public int Calculate(int rows, int columns, string value)
         {
-            string s = "135792468";  
-            int even = 0;
+            int[,] mtrx = new int[rows, columns];
 
-            for (int i = 0; i < s.Length; i++)
-                if ((s[i] - '0') % 2 == 0)
-                    even++;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    mtrx[i, j] = int.Parse(value.Substring(i * columns + j, 1));
+                }
+            }
 
-            return even;
+            int count = 0;
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (mtrx[i, j] % 2 == 0)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
         }
     }
 }
