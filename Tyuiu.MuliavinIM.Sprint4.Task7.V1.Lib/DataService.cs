@@ -8,8 +8,6 @@ namespace Tyuiu.MuliavinIM.Sprint4.Task7.V1.Lib
         {
             int[,] mtrx = new int[n, m];
 
-            int index = 0;
-
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)

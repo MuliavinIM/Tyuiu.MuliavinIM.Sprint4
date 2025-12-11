@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.MuliavinIM.Sprint4.Task7.V1.Lib\Tyuiu.MuliavinIM.Sprint4.Task7.V1.Lib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
