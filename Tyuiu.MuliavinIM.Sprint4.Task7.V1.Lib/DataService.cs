@@ -6,15 +6,29 @@ namespace Tyuiu.MuliavinIM.Sprint4.Task7.V1.Lib
     {
         public int Calculate(int n, int m, string value)
         {
-            int res = 0;
-            foreach (char element in value)
+            int[,] matrix = new int[n, m];
+
+            for (int i = 0; i < n; i++)
             {
-                if ((int)Char.GetNumericValue(element) % 2 == 0)
+                for (int j = 0; j < m; j++)
                 {
-                    res++;
+                    matrix[i, j] = int.Parse(value.Substring(i * m + j, 1));
                 }
             }
-            return res;
+
+            int countEven = 0;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    if (matrix[i, j] % 2 == 0)
+                    {
+                        countEven++;
+                    }
+                }
+            }
+
+            return countEven;
         }
     }
 }
